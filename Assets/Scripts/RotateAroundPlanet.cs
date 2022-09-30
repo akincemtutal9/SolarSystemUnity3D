@@ -8,11 +8,6 @@ public class RotateAroundPlanet : MonoBehaviour
 
     [SerializeField] private float rotationSpeed;
 
-    void Start()
-    {
-        if (targetPlanet == null) { return; }    
-    }
-
     // Update is called once per frame
     void Update()
     {
