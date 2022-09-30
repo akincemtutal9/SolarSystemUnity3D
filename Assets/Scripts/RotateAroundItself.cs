@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateItself : MonoBehaviour
+public class RotateAroundItself : MonoBehaviour
 {
     [SerializeField] private float selfRotationSpeed;
     private Transform selfTransform;
@@ -16,11 +16,10 @@ public class RotateItself : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RotateAroundItself();
+        RotateAroundSelfTransform();
     }
-    private void RotateAroundItself()
+    private void RotateAroundSelfTransform()
     {
-        transform.RotateAround(selfTransform.transform.position, selfTransform.transform.up, selfRotationSpeed * Time.deltaTime); ;
-
+        transform.RotateAround(selfTransform.position, selfTransform.up, selfRotationSpeed * Time.deltaTime); ;
     }
 }
